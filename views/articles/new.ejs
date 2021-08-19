@@ -73,7 +73,7 @@
   
       <div class="container">
        <h1 class="mb-4">New Article</h1>
-       <form action ="/articles" method="POST">
+       <form action ="/articles" method="POST" enctype="multipart/form-data">
         <form>
             
             <div class="form-outline mb-4">
@@ -126,6 +126,10 @@
               <input required type="text" id="candidateShouldHave" name="candidateShouldHave" class="form-control"<%= article.candidateShouldHave %> />
               <label class="form-label" for="candidateShouldHave">candidateShouldHave</label>
             </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for for="image">Image</label>
+              <input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+          </div>
             <!-- <div class="form-outline mb-4">
               <input type="text" id="form4Example2" class="form-control" />
               <label class="form-label" for="form4Example2">Created At</label>

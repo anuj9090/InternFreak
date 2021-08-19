@@ -3,21 +3,22 @@ const router=express.Router();
 const Article=require('./../models/article')
 const path = require("path");
 const app=express();
-// const multer = require('multer');
+const multer = require('multer');
+const fs = require('fs');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(express.static( __dirname + "/public"));
-// // Set EJS as templating engine
-// app.set("view engine", "ejs");
-
- 
-
-// upload(req,res,(err)=>{
-//     if(!req.file)
-//     return res.json({error: 'All fields are required'})
-//     if(err)
-//     return res.status(500).send({error:err.message});
-// })
+var storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+      cb(null,'./../InternFreak/public/uploads');
+    },
+    filename: function(req, file, cb) {
+        cb(null,file.originalname);
+      }
+  });
+var upload=multer({
+    storage:storage,
+})
 app.use(express.static(path.join(__dirname,"public")));
 router.get('/',async (req,res)=>{
     const articles=await Article.find().sort({
@@ -30,7 +31,7 @@ router.get('/',async (req,res)=>{
 router.get('/new',(req,res)=>{
     res.render('articles/new',{article:new Article()})
 })
-router.post('/',async (req,res)=>{
+router.post('/',upload.single("image"),async (req,res)=>{
    let article = new Article({
     //    console.log(req.body)
        title: req.body.title,
@@ -43,12 +44,8 @@ router.post('/',async (req,res)=>{
        ctc:req.body.ctc,
        location:req.body.location,
        applyLink:req.body.applyLink,
-       candidateShouldHave:req.body.candidateShouldHave
-
-    //    img: {
-    //     data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-    //     contentType: 'image/png'
-    // }
+       candidateShouldHave:req.body.candidateShouldHave,
+       image:req.file.filename
    })
    
    try{
@@ -61,17 +58,6 @@ router.post('/',async (req,res)=>{
     res.render('articles/new',{article:article})
    }
 })
-// let storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//         cb(null, 'uploads/')
-//     },
-//     filename: (req, file, cb) => {
-//         cb(null, file.fieldname + '-' + Date.now())
-//     }
-// });
-// let upload = multer({ storage,
-//     limit:{fileSize:100000*100},
-//     }).single('articles/new');
 router.get('/:slug',async (req,res)=>{
     try{
     const article=await Article.findOne({slug:req.params.slug})
@@ -81,12 +67,9 @@ router.get('/:slug',async (req,res)=>{
         createdAt:'desc'
     })
     res.render('articles/newpost',{articles:articles,article:article})
-    // res.render('articles/newpost',{article:article})
-    
     }
     catch(e){
         console.log(e);
     }
 })
-
 module.exports=router;

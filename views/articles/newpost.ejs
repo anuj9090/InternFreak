@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="en">
-
-<!-- Mirrored from preview.colorlib.com/theme/magdesign/single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jul 2021 03:58:27 GMT -->
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -12,43 +9,31 @@
 <title>Internfreak</title>
 </head>
 <body>
-	
 <div class="section post-section pt-5">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-lg-8">
 <div class="text-center">
-<!-- <img src="images/xperson_1.jpg.pagespeed.ic.ku-D0yMWz5.jpg" alt="Image" class="author-pic img-fluid rounded-circle mx-auto"> -->
-<img src="/images/newpostlogo.png" alt="Image" class="img-fluid rounded mb-4">
-
+<img src="/uploads/<%=article.image%>" alt="Image" class="img-fluid rounded mb-4">
 </div>
 <span class="date d-block text-center small text-uppercase text-black-50 mb-5" >Posted on : <%= article.createdAt.toLocaleDateString() %></span>
 <h2 class="heading text-center"><%= article.heading %></h2>
-
-
 <br>
-<!-- <img src="images/logo.png" alt="Image" class="img-fluid rounded mb-4"> -->
 <p>
 	<!-- Company details: Vinsol is a global, agile team of Rails, iOS and Android experts. We've created hundreds of great products for the world's best known brands and most innovative start-ups. We've been exceeding our clients' web and mobile development expectations for fourteen years. -->
-	<%= article.companydetails %>
+	<%= article.companyDetails %>
 	<br>
 	<br>
-	<a href="<%= article.applyLink %>" >Click Here To Apply </a>
-
-
 <br>
 </p>
 <!-- <blockquote>
 <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
 </blockquote> -->
 
-
 <div><h5>Designation :</h5> <p><%= article.designation %> </p></div>
 <h5>Qualification :</h5> <p><%= article.qualification %></p>
 <h5>CTC :</h5> <p><%= article.ctc %> </p>
 <h5>Location :</h5> <p><%= article.location %> </p>
-
-
 
 	<h5>Candidate should have : </h5>
 
@@ -61,8 +46,7 @@
 	<p>4. Good to have experience in Javascript/Jquery/CSS/HTML/PHP etc.</p>
 <p>5. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
 </p>
-
-<a href="<%= article.applyLink %>>Click Here To Apply </a>
+<a href="<%= article.applyLink %>" >Click Here To Apply </a>
 
 <div class="row mt-5 pt-5 border-top">
 <div class="col-12">
@@ -83,7 +67,7 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
-<h2 class="heading">Related</h2>
+<h2 class="heading mb-4">Recent Jobs and Internship Openings</h2>
 </div>
 </div>
 <div class="row justify-content-center">
@@ -113,28 +97,8 @@
 </div>
 </div>
 </div>
-
 <% } %>
 </div>
-</div>
-</div>
-<div class="py-5 bg-light mx-md-3 sec-subscribe">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<h2 class="h4 fw-bold">Subscribe to newsletter</h2>
-</div>
-</div>
-<form action="#" class="row">
-<div class="col-md-8">
-<div class="mb-3 mb-md-0">
-<input type="email" class="form-control" placeholder="Enter your email">
-</div>
-</div>
-<div class="col-md-4 d-grid">
-<input type="submit" class="btn btn-primary" value="Subscribe">
-</div>
-</form>
 </div>
 </div>
 <div class="site-footer">
@@ -160,7 +124,6 @@
 </div>
 </div>
 </div>
-
 <div id="overlayer"></div>
 <div class="loader">
 <div class="spinner-border" role="status">
@@ -174,17 +137,12 @@
 <script>eval(mod_pagespeed_Pkx$Oz4Gi9);</script>
 <script>eval(mod_pagespeed_9lpIcAXJZV);</script>
 <script>eval(mod_pagespeed_GIrE68D1a2);</script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-
 			gtag('config', 'UA-23581568-13');
 		</script>
-<!-- <script defer src="../../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"672182638869d597","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.7.0","si":10}'></script> -->
 </body>
-
-<!-- Mirrored from preview.colorlib.com/theme/magdesign/single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jul 2021 03:58:28 GMT -->
 </html>
