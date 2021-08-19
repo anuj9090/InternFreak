@@ -32,7 +32,10 @@
 
 <div><h5>Designation :</h5> <p><%= article.designation %> </p></div>
 <h5>Qualification :</h5> <p><%= article.qualification %></p>
-<h5>CTC :</h5> <p><%= article.ctc %> </p>
+<% if(article.ctc =="null") {%>
+<% } else {%>
+	<h5>CTC :</h5> <p><%= article.ctc %> </p>
+	<% } %>
 <h5>Location :</h5> <p><%= article.location %> </p>
 
 	<h5>Candidate should have : </h5>
