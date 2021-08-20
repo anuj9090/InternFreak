@@ -75,10 +75,9 @@
        <h1 class="mb-4">New Article</h1>
        <form action ="/articles" method="POST" enctype="multipart/form-data">
         <form>
-            
             <div class="form-outline mb-4">
               <input required type="text" id="title" name="title"class="form-control" <%= article.title %>  />
-              <label class="form-label" for="title">Title</label>
+              <label class="form-label" for="title">Title Home Page ↑</label>
             </div>
             <div class="form-outline mb-4">
                 <input required type="text" id="category" name="category" <%= article.category %>/>
@@ -92,39 +91,44 @@
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input required type="text" id="description" name="description" class="form-control"<%= article.description %> />
-              <label class="form-label" for="description">Description</label>
-            </div>
-            <div class="form-outline mb-4">
-              <input required type="text" id="companyDetails" name="companyDetails" class="form-control"<%= article.companyDetails %> />
-              <label class="form-label" for="companyDetails">companyDetails</label>
+              <label class="form-label" for="description">Description Home page ↑</label>
             </div>
             <div class="form-outline mb-4">
               <input required type="text" id="heading" name="heading" class="form-control"<%= article.heading %> />
-              <label class="form-label" for="heading">heading</label>
+              <label class="form-label" for="heading">heading ↑</label>
             </div>
             <div class="form-outline mb-4">
+              <input required type="text" id="companyDetails" name="companyDetails" class="form-control"<%= article.companyDetails %> />
+              <label class="form-label" for="companyDetails">companyDetails ↑</label>
+            </div>
+            
+            <div class="form-outline mb-4">
               <input required type="text" id="designation" name="designation" class="form-control"<%= article.designation %> />
-              <label class="form-label" for="designation">designation</label>
+              <label class="form-label" for="designation">designation ↑</label>
             </div>
             <div class="form-outline mb-4">
               <input required type="text" id="qualification" name="qualification" class="form-control"<%= article.qualification %> />
-              <label class="form-label" for="qualification">qualification</label>
+              <label class="form-label" for="qualification">Batch Eligible ↑</label>
+            </div>
+            <div class="form-outline mb-4">
+              <input required type="text" id="ctcOrStipend" name="ctcOrStipend" class="form-control"<%= article.ctc %> />
+              <label class="form-label" for="ctcOrStipend">ctc/Stipend-heading ↑</label>
             </div>
             <div class="form-outline mb-4">
               <input required type="text" id="ctc" name="ctc" class="form-control"<%= article.ctc %> />
-              <label class="form-label" for="ctc">ctc</label>
+              <label class="form-label" for="ctc">ctc ↑</label>
             </div>
             <div class="form-outline mb-4">
               <input required type="text" id="location" name="location" class="form-control"<%= article.location %> />
-              <label class="form-label" for="location">location</label>
+              <label class="form-label" for="location">location ↑</label>
             </div>
             <div class="form-outline mb-4">
               <input required type="text" id="applyLink" name="applyLink" class="form-control"<%= article.applyLink %> />
-              <label class="form-label" for="applyLink">applyLink</label>
+              <label class="form-label" for="applyLink">applyLink ↑</label>
             </div>
             <div class="form-outline mb-4">
               <input required type="text" id="candidateShouldHave" name="candidateShouldHave" class="form-control"<%= article.candidateShouldHave %> />
-              <label class="form-label" for="candidateShouldHave">candidateShouldHave</label>
+              <label class="form-label" for="candidateShouldHave">candidateShouldHave ↑</label>
             </div>
             <div class="form-outline mb-4">
               <label class="form-label" for for="image">Image</label>

@@ -109,20 +109,12 @@
 </div>
 <div class="content">
 <h2 class="heading mb-3"><a href="articles/<%=article.slug %>"><%= article.title %></a></h2>
+
+<p><%= article.description %></p>
 <div class="post-meta mb-1">
 	<a href="#" class="category"><%= article.category %></a> &mdash;
 	 <span class="date"><%= article.createdAt.toLocaleDateString() %></span> 
 	</div>
-<p><%= article.description %></p>
-<a href="#" class="post-author d-flex align-items-center">
-<div class="author-pic">
-<img src="images/logo.png" alt="Image">
-</div>
-<div class="text">
-<strong>Intern Freak</strong>
-<span>CEO and Founder</span>
-</div>
-</a>
 </div>
 </div>
 </div>

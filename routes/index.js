@@ -41,6 +41,7 @@ router.post('/',upload.single("image"),async (req,res)=>{
        heading:req.body.heading,
        designation:req.body.designation,
        qualification:req.body.qualification,
+       ctcOrStipend:req.body.ctcOrStipend,
        ctc:req.body.ctc,
        location:req.body.location,
        applyLink:req.body.applyLink,

@@ -15,7 +15,9 @@ const blogSchema=new mongoose.Schema({
    },
    qualification:{
     type:String
-    ,
+   },
+   ctcOrStipend:{
+    type:String
    },
    ctc:{
      type:String
