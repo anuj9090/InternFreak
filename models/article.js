@@ -40,16 +40,10 @@ const blogSchema=new mongoose.Schema({
   },
   applyLink:{
     type:String
-    ,
    },
    candidateShouldHave:{ 
      type:String
-    ,
    },
-  // writtenBy:{
-  //   type:String
-  //   
-  // },
   createdAt:{
     type:Date,
     default:Date.now()
@@ -61,8 +55,36 @@ const blogSchema=new mongoose.Schema({
   },
   image:  { 
    type:String , 
-   required:true,
-  }
+   required:true
+  },
+  khaliDabbaHeading:{ 
+    type:String , 
+    required:true
+   },
+   khaliDabbaDescription:  { 
+    type:String , 
+    required:true
+   },
+   candidateShouldDescription1:  { 
+    type:String , 
+    required:true
+   },
+   candidateShouldDescription2:  { 
+    type:String , 
+    required:true
+   },
+   candidateShouldDescription3:  { 
+    type:String , 
+    required:true
+   },
+   candidateShouldDescription4:  { 
+    type:String , 
+    required:true
+   },
+   candidateShouldDescription5:  { 
+    type:String , 
+    required:true
+   }
 })
 blogSchema.pre('validate',function(next){
   if(this.title)

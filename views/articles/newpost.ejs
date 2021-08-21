@@ -12,6 +12,7 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/A.style.css.pagespeed.cf.2hpsIU3gX-.css">
+<script src="https://kit.fontawesome.com/63876949bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -25,8 +26,8 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 		<ul class="navbar-nav ml-auto mr-md-3 ">
 		<li class="nav-item  active"><a href="/" class="nav-link ">Home</a></li>
-		<li class="nav-item"><a href="#contact" class="nav-link ">Apply Link</a></li>
-		<li class="nav-item"><a href="#article" class="nav-link ">Recent Posts</a></li>
+		<li class="nav-item"><a href="#applylink" class="nav-link ">Apply Link</a></li>
+		<li class="nav-item"><a href="#recent" class="nav-link ">Recent Openings</a></li>
 	
 		</ul>
 		</div>
@@ -56,33 +57,44 @@
 </blockquote> -->
 
 <div><h5>Designation :</h5> <p><%= article.designation %> </p></div>
-<h5>Qualification :</h5> <p><%= article.qualification %></p>
-<% if(article.ctc =="null") {%>
+<h5>Batch Eligible :</h5> <p><%= article.qualification %></p>
+<% if(article.ctc =="n") {%>
 <% } else {%>
-	<h5><%= article.ctcOrStipend %></h5> <p><%= article.ctc %> </p>
+	<h5><%= article.ctcOrStipend %> :</h5> <p><%= article.ctc %> </p>
 	<% } %>
 <h5>Location :</h5> <p><%= article.location %> </p>
-	<h5>Candidate should have : </h5>
+<% if(article.khaliDabbaHeading =="n") {%>
+	<% } else {%>
+		<h5><%= article.khaliDabbaHeading %> :</h5> <p><%= article.khaliDabbaDescription %> </p>
+		<% } %>
+	<h5><%= article.candidateShouldHave %> :</h5>
 
-	<p> 1. Strong programming skills</p>
+	<p> 1. <%= article.candidateShouldDescription1 %></p>
 	
-	<p>2. Excellent problem-solving skills</p>
-	
-<p>	3. Excellent communication skills
-</p>	
-	<p>4. Good to have experience in Javascript/Jquery/CSS/HTML/PHP etc.</p>
-<p>5. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-</p>
-<a href="<%= article.applyLink %>" >Click Here To Apply </a>
+	<p>2. <%= article.candidateShouldDescription2 %></p>
+	<% if(article.candidateShouldDescription3=="n"){%>
+		<% } else {%>
+<p>	3. <%= article.candidateShouldDescription3 %></p>	
+<% } %>
+<% if(article.candidateShouldDescription4=="n"){%>
+	<% } else {%>
+<p>	4. <%= article.candidateShouldDescription4 %></p>	
+<% } %>
+<% if(article.candidateShouldDescription5=="n"){%>
+	<% } else {%>
+<p>	5. <%= article.candidateShouldDescription5 %></p>	
+<% } %>
+
+<a id="applylink" href="<%= article.applyLink %>" >Click Here To Apply </a>
 
 <div class="row mt-5 pt-5 border-top">
 <div class="col-12">
 <span class="fw-bold text-black small mb-1">Share</span>
 <ul class="social list-unstyled">
-<li><a href="#"><span class="icon-facebook"></span></a></li>
-<li><a href="#"><span class="icon-twitter"></span></a></li>
-<li><a href="#"><span class="icon-linkedin"></span></a></li>
-<li><a href="#"><span class="icon-pinterest"></span></a></li>
+	<li><a href="https://bit.ly/2UFwHIY"><i class="fab fa-instagram"></i></span></a></li>
+	<li><a href="https://t.me/internfreak"><i class="fab fa-telegram-plane"></i></span></a></li>
+	<li><a href="https://bit.ly/2VAFaOp"><i class="fab fa-linkedin"></i></a></li>
+	<!-- <li><a href="#"><span class="icon-youtube-play"></span></a></li> -->
 </ul>
 </div>
 </div>
@@ -90,26 +102,57 @@
 </div>
 </div>
 </div>
-
+<div class="section pb-0">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-12">
+	<h2 id ="recent"class="heading mb-4">Recent Openings</h2>
+	</div>
+	</div>
+	<div class="row justify-content-center">
+		<% for(let i=0;i<=3;i++) {%>
+	<div class="col-lg-12">
+	<div class="post-entry d-md-flex small-horizontal mb-5">
+	<div class="me-md-5 thumbnail mb-3 mb-md-0">
+	<img src="/uploads/<%=articles[i].image %>" alt="Image" class="img-fluid">
+	</div>
+	<div class="content">
+	<h2 class="heading"><a href="single.html"><%= articles[i].title %></a></h2>
+	<div class="post-meta mb-3">
+		<p><%= articles[i].description %></p>
+		<a href="#" class="category"><%= articles[i].category %></a> &mdash;
+		
+		<span class="date"><%= articles[i].createdAt.toLocaleDateString() %></span>
+		</div>
+	
+	<a href="#" class="post-author d-flex align-items-center">
+	</a>
+	</div>
+	</div>
+	</div>
+	<% } %>
+	</div>
+	</div>
+	</div>
 <div class="site-footer">
 <div class="container">
 <div class="row justify-content-center copyright">
 <div class="col-lg-7 text-center">
 <div class="widget">
 <ul class="social list-unstyled">
-<li><a href="#"><span class="icon-facebook"></span></a></li>
-<li><a href="#"><span class="icon-twitter"></span></a></li>
-<li><a href="#"><span class="icon-linkedin"></span></a></li>
-<li><a href="#"><span class="icon-youtube-play"></span></a></li>
+	<li><a href="https://bit.ly/2UFwHIY"><i class="fab fa-instagram"></i></span></a></li>
+	<li><a href="https://t.me/internfreak"><i class="fab fa-telegram-plane"></i></span></a></li>
+	<li><a href="https://bit.ly/2VAFaOp"><i class="fab fa-linkedin"></i></a></li>
+	<!-- <li><a href="#"><span class="icon-youtube-play"></span></a></li> -->
 </ul>
 </div>
 <div class="widget">
-<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a>
+<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
 </p>
-<div class="d-block">
+<!-- <div class="d-block">
 <a href="#" class="m-2">Terms &amp; Conditions</a>/
 <a href="#" class="m-2">Privacy Policy</a>
-</div>
+</div> -->
 </div>
 </div>
 </div>
@@ -134,5 +177,9 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-23581568-13');
 		</script>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.5x6Uz2igdj.js"></script><script>eval(mod_pagespeed_0UPnXzZwRD);</script>
+		<script>eval(mod_pagespeed_W64Hd3v$EA);</script>
+		<script>eval(mod_pagespeed_YC9jOPNpKZ);</script>
 </body>
 </html>
