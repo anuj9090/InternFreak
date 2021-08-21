@@ -24,11 +24,9 @@ router.get('/',async (req,res)=>{
     const articles=await Article.find().sort({
         createdAt:'desc'
     })
-            res.render('articles/inde',{articles:articles});
-        
+            res.render('articles/inde',{articles:articles});     
 })
-
-router.get('/new',(req,res)=>{
+router.get('/027b1c1a91da231cf5f0e7243c63020c027b1c1a91da231cf5f0e7243c63020c',(req,res)=>{
     res.render('articles/new',{article:new Article()})
 })
 router.post('/',upload.single("image"),async (req,res)=>{
