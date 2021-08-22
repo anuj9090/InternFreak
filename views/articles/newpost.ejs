@@ -89,7 +89,7 @@
 
 <div class="row mt-5 pt-5 border-top">
 <div class="col-12">
-<span class="fw-bold text-black small mb-1">Share</span>
+<span class="fw-bold text-black small mb-1">Checkout Our Social Media Handles !!</span>
 <ul class="social list-unstyled">
 	<li><a href="https://bit.ly/2UFwHIY"><i class="fab fa-instagram"></i></span></a></li>
 	<li><a href="https://t.me/internfreak"><i class="fab fa-telegram-plane"></i></span></a></li>
@@ -114,7 +114,9 @@
 	<div class="col-lg-12">
 	<div class="post-entry d-md-flex small-horizontal mb-5">
 	<div class="me-md-5 thumbnail mb-3 mb-md-0">
-	<img src="/uploads/<%=articles[i].image %>" alt="Image" class="img-fluid">
+		<a href="<%=articles[i].slug %>">
+
+	<img src="/uploads/<%=articles[i].image %>" alt="Image" class="img-fluid"> </a>
 	</div>
 	<div class="content">
 	<h2 class="heading"><a href="single.html"><%= articles[i].title %></a></h2>
