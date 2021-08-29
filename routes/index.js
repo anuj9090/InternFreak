@@ -21,17 +21,36 @@ var upload=multer({
 })
 app.use(express.static(path.join(__dirname,"public")));
 router.get('/',async (req,res)=>{
+    const page=parseInt(req.query.page);
+    const limit=parseInt(req.query.limit);
+    const startIndex=(page-1)*limit;
+    const endIndex=page*limit;
+    // const results={}
     const articles=await Article.find().sort({
         createdAt:'desc'
     })
-            res.render('articles/inde',{articles:articles});     
+//     if(endIndex<articles.length)
+//     {
+//     results.next={
+//         page:page+1,
+//         limit:limit
+//     }
+// }
+//     if(startIndex>0)
+//     {
+//     results.previous={
+//         page:page-1,
+//         limit:limit
+//     }
+// }
+results=articles.slice(startIndex,endIndex);
+            res.render('articles/jobs',{articles:results});     
 })
 router.get('/027b1c1a91da231cf5f0e7243c63020c027b1c1a91da231cf5f0e7243c63020c',(req,res)=>{
     res.render('articles/new',{article:new Article()})
 })
 router.post('/',upload.single("image"),async (req,res)=>{
    let article = new Article({
-    //    console.log(req.body)
        title: req.body.title,
        category: req.body.category,
        description: req.body.description,

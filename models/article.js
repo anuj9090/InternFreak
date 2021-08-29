@@ -2,16 +2,13 @@ const mongoose =require('mongoose');
 const slugify=require('slugify')
 const blogSchema=new mongoose.Schema({
   companyDetails:{
-    type:String
-    
+    type:String 
   },
   heading:{
     type:String
-    
   },
    designation:{
     type:String
-    
    },
    qualification:{
     type:String

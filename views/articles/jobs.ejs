@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="I4fflD--MA6AQVL0lx0E4WSFjIy3AP1Oca5Lh69fOdk" />
+<meta name="description" content="We provide daily updates on internships and job postings , Search latest job openings online including IT, Fresher, Walk-ins, Part time and much more !">
+
+<title>Internships | Jobs -Internfreak</title>
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css" />
+<link rel="shortcut icon" href="/images/logo.png" alt="logo" type="image/svg+xml">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/A.style.css.pagespeed.cf.2hpsIU3gX-.css">
+<script src="https://kit.fontawesome.com/63876949bd.js" crossorigin="anonymous"></script>
+
+</head>
+<body>	
+	<nav class="navbar  navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	<div class="container ">
+		<a href="/" class="navbar-left"><img src="images/logo.png" alt="InternFreak logo" width="75" height="65"></a>
+	<a class="navbar-brand " href="/">InternFreak</a>
+	<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="fa fa-bars"></span> Menu
+	</button>
+	<div class="collapse navbar-collapse navbar-fixed-top" id="ftco-nav">
+	<ul class="navbar-nav ml-auto mr-md-3 ">
+	<li class="nav-item  active"><a href="/" class="nav-link ">Home</a></li>
+	<li class="nav-item"><a href="#Vision" class="nav-link ">Our Vision</a></li>
+	<li class="nav-item"><a href="#contact" class="nav-link ">Contact Us</a></li>
+	<li class="nav-item"><a href="#article" class="nav-link ">Jobs | internships</a></li>
+
+	</ul>
+	</div>
+	</div>
+	</nav>
+<div class="section">
+<div class="container">
+<div class="row g-5" id="article">
+	<% articles.forEach(article =>{ %>
+<div class="col-lg-4">
+	
+<div class="post-entry d-block small-post-entry-v">
+
+<div class="thumbnail">
+<a href="articles/<%=article.slug %>">
+	<img src="uploads/<%= article.image %>" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="content">
+<h2 class="heading mb-3"><a href="articles/<%=article.slug %>"><%= article.title %></a></h2>
+
+<p><%= article.description %></p>
+<div class="post-meta mb-1">
+	<a href="#" class="category"><%= article.category %></a> &mdash;
+	 <span class="date"><%= article.createdAt.toLocaleDateString() %></span> 
+	</div>
+</div>
+</div>
+</div>
+<% }) %>
+</div>
+</div>
+</div>
+
+
+<div class="site-footer">
+<div class="container">
+<div class="row justify-content-center copyright">
+<div class="col-lg-7 text-center">
+<div class="widget">
+<ul class="social list-unstyled">
+
+<li><a href="https://bit.ly/2UFwHIY"><i class="fab fa-instagram"></i></span></a></li>
+<li><a href="https://t.me/internfreak"><i class="fab fa-telegram-plane"></i></span></a></li>
+<li><a href="https://bit.ly/2VAFaOp"><i class="fab fa-linkedin"></i></a></li>
+<!-- <li><a href="#"><span class="icon-youtube-play"></span></a></li> -->
+</ul>
+</div>
+<div class="widget">
+<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="overlayer"></div>
+<div class="loader">
+<div class="spinner-border" role="status">
+<span class="visually-hidden">Loading...</span>
+</div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/tiny-slider.js"></script>
+<script src="js/glightbox.min.js%2baos.js%2bnavbar.js%2bcounter.js%2bcustom.js.pagespeed.jc.B7bFTsJZUK.js"></script><script>eval(mod_pagespeed_KpCH1a$C_m);</script>
+<script>eval(mod_pagespeed_Ej3jj9tqUo);</script>
+<script>eval(mod_pagespeed_Pkx$Oz4Gi9);</script>
+<script>eval(mod_pagespeed_9lpIcAXJZV);</script>
+<script>eval(mod_pagespeed_GIrE68D1a2);</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-23581568-13');
+		</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.5x6Uz2igdj.js"></script><script>eval(mod_pagespeed_0UPnXzZwRD);</script>
+<script>eval(mod_pagespeed_W64Hd3v$EA);</script>
+<script>eval(mod_pagespeed_YC9jOPNpKZ);</script>
+</body>
+</html>

@@ -6,6 +6,9 @@ const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const path = require("path");
 const Article=require('./models/article')
+const Blog=require('./routes/blog')
+const user=require('./routes/user')
+const udemy=require('./routes/udemy')
 // const expressLayouts=require('express-ejs-layouts')
 // Static Folder
 
@@ -22,11 +25,16 @@ app.use(express.urlencoded({ extended: false }))
 // app.use(expressLayouts)
 app.use(express.static("public"));
 // Routes
-app.get("/", require("./routes/index"));
-// app.get("/new",function(req,res){
-//   res.render("articles/newpost")
-// })
-app.use('/articles',articleRouter)
+app.get('/',async (req,res)=>{
+  const articles=await Article.find().sort({
+      createdAt:'desc'
+  })
+          res.render('articles/inde',{articles:articles});     
+})
+app.use('/jobs-and-internship-opportunities',articleRouter)
+app.use('/user',user);
+app.use('/blog',Blog);
+app.use('/udemy',udemy)
 // app.use('/',articleRouter)
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
