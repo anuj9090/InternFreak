@@ -71,7 +71,10 @@
 
 	<p> • <%= article.candidateShouldDescription1 %></p>
 	
-	<p>• <%= article.candidateShouldDescription2 %></p>
+	<% if(article.candidateShouldDescription2=="n"){%>
+		<% } else {%>
+<p>	• <%= article.candidateShouldDescription2 %></p>	
+<% } %>
 	<% if(article.candidateShouldDescription3=="n"){%>
 		<% } else {%>
 <p>	• <%= article.candidateShouldDescription3 %></p>	
