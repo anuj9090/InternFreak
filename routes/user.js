@@ -6,7 +6,7 @@ const User=require('./../models/userAuthentication')
 const app=express();
 router.get('/registration',(req,res)=>{
     res.render('articles/registration');
-})
+});
 router.post('/registration',(req,res)=>{
     console.log(req.body);
     let user=new User({
@@ -20,7 +20,7 @@ router.post('/registration',(req,res)=>{
         else
         {
             // console.log(user);
-         res.render("articles/login")
+         res.redirect("../jobs-and-internship-opportunities/inde")
         }
     });
 })
@@ -38,16 +38,12 @@ router.post('/login',(req,res)=>{
             console.log(err);
         }
         else
-        {
-            // console.log(foundUser)
-            if(foundUser)
-            {
-                if(foundUser.password === password)
+        { if(foundUser)
+            { if(foundUser.password === password)
                 {
-                  res.render("articles/registration")
-                }
-            }
-        }
+                    req.user=foundUser
+                  res.redirect("")
+                } } }
     })
 })
 

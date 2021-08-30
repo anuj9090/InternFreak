@@ -28,9 +28,11 @@
 	<div class="collapse navbar-collapse navbar-fixed-top" id="ftco-nav">
 	<ul class="navbar-nav ml-auto mr-md-3 ">
 	<li class="nav-item  active"><a href="/" class="nav-link ">Home</a></li>
-	<li class="nav-item"><a href="#Vision" class="nav-link ">Our Vision</a></li>
+	<li class="nav-item"><a href="jobs-and-internship-opportunities?page=1&limit=20" class="nav-link ">Jobs | internships</a></li>
 	<li class="nav-item"><a href="#contact" class="nav-link ">Contact Us</a></li>
-	<li class="nav-item"><a href="#article" class="nav-link ">Jobs | internships</a></li>
+	<li class="nav-item"><a href="#Vision" class="nav-link ">Our Vision</a></li>
+	
+	
 
 	</ul>
 	</div>
@@ -111,12 +113,12 @@
 <div class="post-entry d-block small-post-entry-v">
 
 <div class="thumbnail">
-<a href="articles/<%=article.slug %>">
+<a href="jobs-and-internship-opportunities/<%=article.slug %>">
 	<img src="uploads/<%= article.image %>" alt="Image" class="img-fluid">
 </a>
 </div>
 <div class="content">
-<h2 class="heading mb-3"><a href="articles/<%=article.slug %>"><%= article.title %></a></h2>
+<h2 class="heading mb-3"><a href="jobs-and-internship-opportunities/<%=article.slug %>"><%= article.title %></a></h2>
 
 <p><%= article.description %></p>
 <div class="post-meta mb-1">
@@ -130,9 +132,9 @@
 </div>
 </div>
 </div>
-
-
-
+<div class="text-center">
+<a href="jobs-and-internship-opportunities?page=1&limit=20"><button class="btn center-block btn-primary">Load More ...</button></a>
+</div>
 	<section>	<div class="section post-section pt-5 " id="contact">
 		<div class="container" id="contact">
 		<div class="row justify-content-center">

@@ -32,9 +32,9 @@ app.get('/',async (req,res)=>{
           res.render('articles/inde',{articles:articles});     
 })
 app.use('/jobs-and-internship-opportunities',articleRouter)
-app.use('/user',user);
-app.use('/blog',Blog);
-app.use('/udemy',udemy)
+// app.use('/user',user);
+// app.use('/blog',Blog);
+// app.use('/udemy',udemy)
 // app.use('/',articleRouter)
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);

@@ -14,19 +14,23 @@ const clientSecret = "gK8EL2ixfREQtuTJRtFJ48TIc2PZUVjpleEKKdNX3PWKRVAAijA1HPxsi8
 // 6.Images
 router.get('/new',(req,res)=>{
      res.render('articles/newUdemy')
-    // const requestToken = req.query.code;
 });
-router.get('/udemycourse',async(req,res)=>
+router.get('/post',async(req,res)=>
 {
+  let udemy=new udemy({
+    title:req.body.title
+  })
   try{
+    console.log(udemy);
 const udemyCourse=await axios.get(
-  `https://www.udemy.com/api-2.0/courses/238934/?fields[course]=description,title,headline,_class,primary_category`,
+  `https://www.udemy.com/api-2.0/courses/${udemy.title}/?fields[course]=description,title,headline,_class,primary_category`,
   {headers:{
     "Accept": "application/json, text/plain, */*",
     "Authorization": "Basic Q1hiVWhLSVE1ZU9uUDlRVXhLS3prUmJ0UlNzTHNseU1PUzJWQ0NHNjpnSzhFTDJpeGZSRVF0dVRKUnRGSjQ4VEljMlBaVVZqcGxlRUtLZE5YM1BXS1JWQUFpakExSFB4c2k4dFVTRWV1b3k4Nk9pUlBCam81UkRVTEFLQWhkWXpRRmpJdUx5bWFFa0k0OGd4UGpXYjJMcW5UUE50ZDE1UnpIR3U0cnpCNQ==",
     "Content-Type": "application/json;charset=utf-8"
   },
 })
+
 // console.log(udemyCourse.data);
 res.render("articles/udemy",{articles:udemyCourse.data})
   }

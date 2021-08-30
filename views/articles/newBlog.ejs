@@ -20,14 +20,13 @@
               <label class="form-label" for="name">Enter title of the blog:</label>
             </div>
             <div class="form-outline mb-4">
-               <input required type="text" id="description" name="description" class="form-control"/> 
-              <label class="form-label" id="description"for="description">Enter description</label>
+              <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea>
+              <label class="form-label" id="description"for="description"name="description">Enter description</label>
             </div>
             <script>
               CKEDITOR.replace('description',{
                   plugins:'wysiwygarea,toolbar,basicstyles,link,image'
               })
-            
             </script>
             <button type="submit" class="btn btn-primary btn-block mb-4">Submit Blog</button>
        </form>

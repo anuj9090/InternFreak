@@ -4,6 +4,7 @@ const Article=require('./../models/article')
 const path = require("path");
 const app=express();
 const multer = require('multer');
+const {authUser,authRole}=require('../controllers/userAuth')
 const fs = require('fs');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
@@ -22,31 +23,25 @@ var upload=multer({
 app.use(express.static(path.join(__dirname,"public")));
 router.get('/',async (req,res)=>{
     const page=parseInt(req.query.page);
-    const limit=parseInt(req.query.limit);
+   const limit=parseInt(req.query.limit);
     const startIndex=(page-1)*limit;
     const endIndex=page*limit;
-    // const results={}
+//     const results={}
     const articles=await Article.find().sort({
         createdAt:'desc'
     })
-//     if(endIndex<articles.length)
-//     {
 //     results.next={
 //         page:page+1,
 //         limit:limit
 //     }
-// }
-//     if(startIndex>0)
-//     {
 //     results.previous={
 //         page:page-1,
 //         limit:limit
-//     }
 // }
-results=articles.slice(startIndex,endIndex);
-            res.render('articles/jobs',{articles:results});     
+ const resultUsers=articles.slice(startIndex,endIndex);
+            res.render('articles/jobs',{articles:resultUsers});     
 })
-router.get('/027b1c1a91da231cf5f0e7243c63020c027b1c1a91da231cf5f0e7243c63020c',(req,res)=>{
+router.get('/new',(req,res)=>{
     res.render('articles/new',{article:new Article()})
 })
 router.post('/',upload.single("image"),async (req,res)=>{
@@ -76,13 +71,14 @@ router.post('/',upload.single("image"),async (req,res)=>{
    try{
        console.log(article);
  article= await article.save();
- res.redirect(`/articles/${article.slug}`)
+ res.redirect(`/jobs-and-internship-opportunities/${article.slug}`)
    }
    catch(e){
        console.log(e);
     res.render('articles/new',{article:article})
    }
 })
+
 router.get('/:slug',async (req,res)=>{
     try{
     const article=await Article.findOne({slug:req.params.slug})

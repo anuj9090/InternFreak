@@ -9,6 +9,11 @@ const userAuthentication=new mongoose.Schema({
     },
     password:{
         type:String
+    },
+    role:{
+      type:String,
+      default:"basic",
+      enum: ["basic","admin"],
     }
 })
 module.exports=mongoose.model('user',userAuthentication);

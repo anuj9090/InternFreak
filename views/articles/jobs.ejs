@@ -28,8 +28,7 @@
 	<div class="collapse navbar-collapse navbar-fixed-top" id="ftco-nav">
 	<ul class="navbar-nav ml-auto mr-md-3 ">
 	<li class="nav-item  active"><a href="/" class="nav-link ">Home</a></li>
-	<li class="nav-item"><a href="#Vision" class="nav-link ">Our Vision</a></li>
-	<li class="nav-item"><a href="#contact" class="nav-link ">Contact Us</a></li>
+	<li class="nav-item"><a href="#footer" class="nav-link ">Follow Us !!</a></li>
 	<li class="nav-item"><a href="#article" class="nav-link ">Jobs | internships</a></li>
 
 	</ul>
@@ -45,12 +44,12 @@
 <div class="post-entry d-block small-post-entry-v">
 
 <div class="thumbnail">
-<a href="articles/<%=article.slug %>">
+<a href="jobs-and-internship-opportunities/<%=article.slug %>">
 	<img src="uploads/<%= article.image %>" alt="Image" class="img-fluid">
 </a>
 </div>
 <div class="content">
-<h2 class="heading mb-3"><a href="articles/<%=article.slug %>"><%= article.title %></a></h2>
+<h2 class="heading mb-3"><a href="jobs-and-internship-opportunities/<%=article.slug %>"><%= article.title %></a></h2>
 
 <p><%= article.description %></p>
 <div class="post-meta mb-1">
@@ -64,13 +63,21 @@
 </div>
 </div>
 </div>
-
-
+<div class="row align-items-center justify-content-center py-5">
+	<div class="col-lg-6 text-center">
+	<div class="custom-pagination">
+		
+	<a href="jobs-and-internship-opportunities?page=1&limit=20">1</a>
+	<a href="jobs-and-internship-opportunities?page=2&limit=20" >2</a>
+	
+	</div>
+	</div>
+	</div>
 <div class="site-footer">
 <div class="container">
 <div class="row justify-content-center copyright">
 <div class="col-lg-7 text-center">
-<div class="widget">
+<div id="footer" class="widget">
 <ul class="social list-unstyled">
 
 <li><a href="https://bit.ly/2UFwHIY"><i class="fab fa-instagram"></i></span></a></li>
