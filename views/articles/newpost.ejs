@@ -40,7 +40,7 @@
 <div class="row justify-content-center">
 <div class="col-lg-8">
 <div class="text-center">
-<img src="/uploads/<%=article.image%>" alt="Image" class="img-fluid rounded mb-4">
+<img src="/uploads/<%=article.image%>" alt="Image" width="185" height="100"  class="img-fluid rounded mb-4">
 </div>
 <span class="date d-block text-center small text-uppercase text-black-50 mb-5" >Posted on : <%= article.createdAt.toLocaleDateString() %></span>
 <h2 class="heading text-center"><%= article.heading %></h2>
@@ -117,7 +117,7 @@
 	<div class="post-entry d-md-flex small-horizontal mb-5">
 	<div class="me-md-5 thumbnail mb-3 mb-md-0">
 		<a href="<%=articles[i].slug %>">
-	<img src="/uploads/<%=articles[i].image %>" alt="Image" class="img-fluid"> </a>
+	<img src="/uploads/<%=articles[i].image %>" alt="Image" width="185" height="100"  class="img-fluid"> </a>
 	</div>
 	<div class="content">
 	<h2 class="heading"><a href="<%=articles[i].slug %>"><%= articles[i].title %></a></h2>
