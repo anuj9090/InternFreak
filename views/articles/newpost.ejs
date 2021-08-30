@@ -69,20 +69,20 @@
 		<% } %>
 	<h5><%= article.candidateShouldHave %> :</h5>
 
-	<p> 1. <%= article.candidateShouldDescription1 %></p>
+	<p> • <%= article.candidateShouldDescription1 %></p>
 	
-	<p>2. <%= article.candidateShouldDescription2 %></p>
+	<p>• <%= article.candidateShouldDescription2 %></p>
 	<% if(article.candidateShouldDescription3=="n"){%>
 		<% } else {%>
-<p>	3. <%= article.candidateShouldDescription3 %></p>	
+<p>	• <%= article.candidateShouldDescription3 %></p>	
 <% } %>
 <% if(article.candidateShouldDescription4=="n"){%>
 	<% } else {%>
-<p>	4. <%= article.candidateShouldDescription4 %></p>	
+<p>	• <%= article.candidateShouldDescription4 %></p>	
 <% } %>
 <% if(article.candidateShouldDescription5=="n"){%>
 	<% } else {%>
-<p>	5. <%= article.candidateShouldDescription5 %></p>	
+<p>	• <%= article.candidateShouldDescription5 %></p>	
 <% } %>
 
 <a id="applylink" href="<%= article.applyLink %>" >Click Here To Apply </a>
