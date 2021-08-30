@@ -105,37 +105,43 @@
 </div>
 </div>
 </div>
+
 <div class="section">
 <div class="container">
 <div class="row g-5" id="article">
-	<% articles.forEach(article =>{ %>
+		<% for(let i=0;i<=5;i++) {%>
+
 <div class="col-lg-4">
 	
 <div class="post-entry d-block small-post-entry-v">
 
 <div class="thumbnail">
-<a href="jobs-and-internship-opportunities/<%=article.slug %>">
-	<img src="uploads/<%= article.image %>" alt="Image" class="img-fluid">
+<a href="jobs-and-internship-opportunities/<%=articles[i].slug %>">
+	<img src="uploads/<%= articles[i].image %>" alt="Image" class="img-fluid">
 </a>
 </div>
 <div class="content">
-<h2 class="heading mb-3"><a href="jobs-and-internship-opportunities/<%=article.slug %>"><%= article.title %></a></h2>
+<h2 class="heading mb-3"><a href="jobs-and-internship-opportunities/<%=articles[i].slug %>"><%= articles[i].title %></a></h2>
 
-<p><%= article.description %></p>
+<p><%= articles[i].description %></p>
 <div class="post-meta mb-1">
-	<a href="#" class="category"><%= article.category %></a> &mdash;
-	 <span class="date"><%= article.createdAt.toLocaleDateString() %></span> 
+	<a href="#" class="category"><%= articles[i].category %></a> &mdash;
+	 <span class="date"><%= articles[i].createdAt.toLocaleDateString() %></span> 
 	</div>
 </div>
 </div>
 </div>
-<% }) %>
+<% } %>
 </div>
 </div>
 </div>
 <div class="text-center">
-<a href="jobs-and-internship-opportunities?page=1&limit=20"><button class="btn center-block btn-primary">Load More ...</button></a>
+<a href="jobs-and-internship-opportunities?page=1&limit=20"><button class="btn center-block btn-primary">Show More</button></a>
 </div>
+<br>
+<br>
+<br>
+<br>
 	<section>	<div class="section post-section pt-5 " id="contact">
 		<div class="container" id="contact">
 		<div class="row justify-content-center">
