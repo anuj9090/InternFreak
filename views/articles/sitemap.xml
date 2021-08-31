@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+		<url>
+			<loc>https://www.internfreak.co</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities?page=1&amp;limit=15</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/#contact</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/#vision</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/#</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities/factset-is-hiring-software-engineer-i</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities/vinsol-is-hiring-software-engineer</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities/siemens-is-hiring-software-engineer-associate</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities/flashprep-is-hiring-software-engineer-intern</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities/shipsy-is-hiring-software-engineering</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/jobs-and-internship-opportunities/adobe-is-hiring-full-time-graduate</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://www.internfreak.co/cdn-cgi/l/email-protection</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+	</urlset>
+

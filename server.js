@@ -11,7 +11,6 @@ const user=require('./routes/user')
 const udemy=require('./routes/udemy')
 // const expressLayouts=require('express-ejs-layouts')
 // Static Folder
-
 app.use(express.static(path.join(__dirname,"public")));
 // mongoose
 const connectDB =require('./config/db')
@@ -30,6 +29,24 @@ app.get('/',async (req,res)=>{
       createdAt:'desc'
   })
           res.render('articles/inde',{articles:articles});     
+})
+app.get('/privacy-policy',(req,res)=>{
+  res.render("articles/privacy-policy")
+})
+app.get('/sitemap.xml',(req,res)=>{
+  res.sendFile(__dirname + '/views/articles/sitemap.xml')
+})
+app.get('/dmca',(req,res)=>{
+  res.render("articles/dmca")
+})
+app.get('/terms-and-conditions',(req,res)=>{
+  res.render("articles/term-condition")
+})
+app.get('/robots.txt',(req,res)=>{
+  res.sendFile(__dirname + '/views/articles/robots.txt')
+})
+app.get('/privacy-policy',(req,res)=>{
+  res.render("articles/privacy-policy")
 })
 app.use('/jobs-and-internship-opportunities',articleRouter)
 // app.use('/user',user);

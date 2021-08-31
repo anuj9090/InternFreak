@@ -15,7 +15,6 @@
 <script src="https://kit.fontawesome.com/63876949bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
 	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 			<a href="/" class="navbar-left"><img src="/images/logo.png" alt="InternFreak logo" width="75" height="65"></a>
@@ -26,120 +25,27 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 		<ul class="navbar-nav ml-auto mr-md-3 ">
 		<li class="nav-item  active"><a href="/" class="nav-link ">Home</a></li>
-		<li class="nav-item"><a href="#applylink" class="nav-link ">Apply Link</a></li>
-		<li class="nav-item"><a href="#recent" class="nav-link ">Recent Openings</a></li>
-	
+		<li class="nav-item"><a href="jobs-and-internship-opportunities?page=1&limit=15" class="nav-link ">Jobs | internships</a></li>
+
 		</ul>
 		</div>
 		</div>
-		</nav>
-
-		
+		</nav>		
 <div class="section post-section pt-5">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-lg-8">
 <div class="text-center">
-<img src="/uploads/<%=article.image%>" alt="Image" width="185" height="100"  class="img-fluid rounded mb-4">
 </div>
-<span class="date d-block text-center small text-uppercase text-black-50 mb-5" >Posted on : <%= article.createdAt.toLocaleDateString() %></span>
-<h2 class="heading text-center"><%= article.heading %></h2>
-<br>
-<p>
-	<!-- Company details: Vinsol is a global, agile team of Rails, iOS and Android experts. We've created hundreds of great products for the world's best known brands and most innovative start-ups. We've been exceeding our clients' web and mobile development expectations for fourteen years. -->
-	<%= article.companyDetails %>
-	<br>
-	<br>
-<br>
-</p>
-<!-- <blockquote>
-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-</blockquote> -->
+<h2 class="heading text-center">DMCA</h2>
+<p>If we Have added some content that belong to you or your organization by mistake, We are sorry for that. We apologize for that and assure you that this wont be repeated in future. If you are rightful owner of the content used in our Website, Please mail us with your Name, Organization Name, Contact Details, Copyright infringing URL and Copyright Proof (URL or Legal Document) at <strong>support@internfreak.co</strong></p>
+<p>I assure you that, I will remove the infringing content Within 48 Hours.</p>
 
-<div><h5>Designation :</h5> <p><%= article.designation %> </p></div>
-<h5>Batch Eligible :</h5> <p><%= article.qualification %></p>
-<% if(article.ctc =="n") {%>
-<% } else {%>
-	<h5><%= article.ctcOrStipend %> :</h5> <p><%= article.ctc %> </p>
-	<% } %>
-<h5>Location :</h5> <p><%= article.location %> </p>
-<% if(article.khaliDabbaHeading =="n") {%>
-	<% } else {%>
-		<h5><%= article.khaliDabbaHeading %> :</h5> <p><%= article.khaliDabbaDescription %> </p>
-		<% } %>
-	<h5><%= article.candidateShouldHave %> :</h5>
 
-	<p> • <%= article.candidateShouldDescription1 %></p>
-	
-	<% if(article.candidateShouldDescription2=="n"){%>
-		<% } else {%>
-<p>	• <%= article.candidateShouldDescription2 %></p>	
-<% } %>
-	<% if(article.candidateShouldDescription3=="n"){%>
-		<% } else {%>
-<p>	• <%= article.candidateShouldDescription3 %></p>	
-<% } %>
-<% if(article.candidateShouldDescription4=="n"){%>
-	<% } else {%>
-<p>	• <%= article.candidateShouldDescription4 %></p>	
-<% } %>
-<% if(article.candidateShouldDescription5=="n"){%>
-	<% } else {%>
-<p>	• <%= article.candidateShouldDescription5 %></p>	
-<% } %>
-
-<a id="applylink" href="<%= article.applyLink %>" >Click Here To Apply </a>
-
-<div class="row mt-5 pt-5 border-top">
-<div class="col-12">
-	<h4>
-<span class="fw-bold text-black small mb-1">Checkout Our Social Media Handles !!</span>
-</h4>
-<ul class="social list-unstyled">
-	<li><a href="https://bit.ly/2UFwHIY"><i class="fab fa-instagram"></i></span></a></li>
-	<li><a href="https://t.me/internfreak"><i class="fab fa-telegram-plane"></i></span></a></li>
-	<li><a href="https://bit.ly/2VAFaOp"><i class="fab fa-linkedin"></i></a></li>
-	<!-- <li><a href="#"><span class="icon-youtube-play"></span></a></li> -->
-</ul>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section pb-0">
-	<div class="container">
-	<div class="row">
-	<div class="col-lg-12">
-	<h2 id ="recent"class="heading mb-4">Recent Openings</h2>
-	</div>
-	</div>
-	<div class="row justify-content-center">
-		<% for(let i=0;i<=3;i++) {%>
-	<div class="col-lg-12">
-	<div class="post-entry d-md-flex small-horizontal mb-5">
-	<div class="me-md-5 thumbnail mb-3 mb-md-0">
-		<a href="<%=articles[i].slug %>">
-	<img src="/uploads/<%=articles[i].image %>" alt="Image" width="185" height="100"  class="img-fluid"> </a>
-	</div>
-	<div class="content">
-	<h2 class="heading"><a href="<%=articles[i].slug %>"><%= articles[i].title %></a></h2>
-	<div class="post-meta mb-3">
-		
-		<a href="#" class="category"><%= articles[i].category %></a> &mdash;
-		
-		<span class="date"><%= articles[i].createdAt.toLocaleDateString() %></span>
-		</div>
-	
-	<a href="#" class="post-author d-flex align-items-center">
-	</a>
-	</div>
-	</div>
-	</div>
-	<% } %>
-	</div>
-	</div>
-	</div>
 <div class="site-footer">
 <div class="container">
 <div class="row justify-content-center copyright">
@@ -159,7 +65,6 @@
 	<a href="terms-and-conditions" class="m-2">Terms &amp; Conditions</a>|
 	<a href="privacy-policy" class="m-2">Privacy Policy</a>|
 	<a href="dmca" class="m-2">DMCA</a>
-	
 	</div>
 <!-- <div class="d-block">
 <a href="#" class="m-2">Terms &amp; Conditions</a>/
