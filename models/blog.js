@@ -17,7 +17,7 @@ const article=new mongoose.Schema({
       },
       createdAt:{
     type:Date,
-    default:Date.now()
+    default:Date.now
   },
 })
 article.pre('validate',function(next){
