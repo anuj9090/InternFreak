@@ -8048,6 +8048,12 @@ a {
 .post-entry .heading a {
   color: #222;
 }
+.post-entry .imageResize{
+height: 30px;
+object-fit: cover;
+object-position: center center;
+
+}
 .post-entry .thumbnail {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 440px;
