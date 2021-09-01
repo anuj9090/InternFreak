@@ -8048,7 +8048,7 @@ a {
 .post-entry .heading a {
   color: #222;
 }
-.post-entry .imageResize{
+.imageResize{
 height: 30px;
 object-fit: cover;
 object-position: center center;
