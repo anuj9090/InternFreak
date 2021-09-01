@@ -7805,7 +7805,7 @@ textarea.form-control {
   height: 36px;
   text-align: center;
   cursor: pointer;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: 1px solid #f8f9fa;
 }
 .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
