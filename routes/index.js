@@ -61,7 +61,7 @@ router.post('/',upload.single("image"),async (req,res)=>{
        candidateShouldDescription2:req.body.candidateShouldDescription2,
        candidateShouldDescription3:req.body.candidateShouldDescription3,
        candidateShouldDescription4:req.body.candidateShouldDescription4,
-       candidateShouldDescription5:req.body.candidateShouldDescription4,
+       candidateShouldDescription5:req.body.candidateShouldDescription5,
        location:req.body.location,
        applyLink:req.body.applyLink,
        candidateShouldHave:req.body.candidateShouldHave,
