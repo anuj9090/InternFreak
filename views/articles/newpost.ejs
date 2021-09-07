@@ -46,15 +46,11 @@
 <h2 class="heading text-center"><%= article.heading %></h2>
 <br>
 <p>
-	<!-- Company details: Vinsol is a global, agile team of Rails, iOS and Android experts. We've created hundreds of great products for the world's best known brands and most innovative start-ups. We've been exceeding our clients' web and mobile development expectations for fourteen years. -->
 	<%= article.companyDetails %>
 	<br>
 	<br>
 <br>
 </p>
-<!-- <blockquote>
-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-</blockquote> -->
 
 <div><h5>Designation :</h5> <p><%= article.designation %> </p></div>
 <h5>Batch Eligible :</h5> <p><%= article.qualification %></p>
@@ -115,7 +111,7 @@
 	</div>
 	</div>
 	<div class="row justify-content-center">
-		<% for(let i=0;i<=3;i++) {%>
+		<% for(let i=0;i<=4;i++) {%>
 	<div class="col-lg-12">
 	<div class="post-entry d-md-flex small-horizontal mb-5">
 	<div class="me-md-5 thumbnail mb-3 mb-md-0">
@@ -130,9 +126,8 @@
 		
 		<span class="date"><%= articles[i].createdAt.toLocaleDateString() %></span>
 		</div>
+		
 	
-	<a href="#" class="post-author d-flex align-items-center">
-	</a>
 	</div>
 	</div>
 	</div>
@@ -140,25 +135,51 @@
 	</div>
 	</div>
 	</div>
-
-<h2 class="heading text-center">What helps you in getting selected? </h2>
-<div class="text-center">
-<p>1. Resume: A resume or CV is the first thing that will reach your recruiter/employer. </p>
-<p>2. Your resume should not exceed more than a page.   </p>
-<p>3. Your resume should mention your skills and projects (most important) </p>
-<p>4. Never send resume in docx file. Always send your resume in pdf file format.  </p>
-<p>5. Your resume should have a clear focus on the job position that you are looking forward to. </p>
-<p>6. Prepare for your exams through test series and learning material. (Edusera Recommended)  </p>
-<p>7. Improve your communication skills.  </p>
-<p>8. Maintain your Linkedin Profile (Highly recommended)   </p>
+	<div class="text-center">
+		<a href="/jobs-and-internship-opportunities?page=1&limit=15"><button class="btn center-block btn-primary">Show More</button></a>
+		</div>
+<br>
+<br>
+	<section>
+	<div class="section  pt-5 " id="GettingSelected">
+		<div class="container">
+		<div class="row justify-content-center">
+		<div class="col-lg-8">
+		<div class="text-center">
+<h4 class="heading text-center">What helps you in getting selected? </h4>
+<br>
+<p>1. Resume: A resume or CV is the first thing that will reach your recruiter/employer. 
+	<br>
+2. Your resume should not exceed more than a page and should be in pdf file format.  
+<br> 
+3. Your resume should mention your skills , projects and has to be updated regularly .
+<br>
+4. Your resume should have a clear focus on the job position that you are looking forward to. 
+<br>
+5. Improve your communication skills.  
+<br>
+6. Maintain your Linkedin Profile.   </p>
 </div>
 
-<h2 class="heading text-center">IMPORTANT </h2>
-<div class="text-center">
-<p>All Company names, logos, and brands are the Intellectual Property of their respective owners. All company, product, and service names used in this website are for identification purposes only. </p>
-<p>We are not associated with any company/agency/agent whose jobs posted on www.internfreak.co and internfreak.co , We are just an information provider for job openings. Read our Disclaimer Policy and Term of Service for more information  </p>
-</div>
+</section>
+<section>
+	<div class="section  pt-5 " id="Vision">
+	<div class="container">
+	<div class="row justify-content-center">
+	<div class="col-lg-8">
+	<div class="text-center">
+	<h5 class="heading text-center">Important !</h5>
+	<br>
+	<p>All Company names , logos , and brands are the Intellectual Property of their respective owners. All company , product , and service names used in this website are for identification purposes only.
 
+
+<br>
+We are not associated with any company/agency/agent whose jobs posted on <strong> www.internfreak.co , internfreak.co</strong>  , We are just an information provider for job openings. Read our <a href="/terms-and-conditions" target="_blank"  class="m-2">Terms &amp; Conditions</a>
+and
+<a href="/privacy-policy"  target="_blank" class="m-2">Privacy Policy</a>
+for more information. 
+</p>				
+</section>
 
 
 
