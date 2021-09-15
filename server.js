@@ -48,7 +48,10 @@ app.get('/robots.txt',(req,res)=>{
 app.get('/privacy-policy',(req,res)=>{
   res.render("articles/privacy-policy")
 })
-app.use('/jobs-and-internship-opportunities',articleRouter)
+app.get('/404-error',(req,res)=>{
+  res.render("articles/404")
+})
+app.use('/jobs-and-internships',articleRouter)
 // app.use('/user',user);
 // app.use('/blog',Blog);
 // app.use('/udemy',udemy)

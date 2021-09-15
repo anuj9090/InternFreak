@@ -35,132 +35,20 @@
 		</nav>
 
 		
-<div class="section post-section pt-5">
-<div class="container">
-<div class="row justify-content-center">
-<div class="col-lg-8">
-<div class="text-center">
-<img src="/uploads/<%=article.image%>" alt="Image" width="185" height="100"  class="img-fluid rounded mb-4">
-</div>
-<span class="date d-block text-center small text-uppercase text-black-50 mb-5" >Posted on : <%= article.createdAt.toLocaleDateString() %></span>
-<h2 class="heading text-center"><%= article.heading %></h2>
-<br>
-<p>
-	<%= article.companyDetails %>
-	<br>
-	<br>
-<br>
-</p>
-
-<div><h5>Designation :</h5> <p><%= article.designation %> </p></div>
-<h5>Batch Eligible :</h5> <p><%= article.qualification %></p>
-<% if(article.ctc =="n") {%>
-<% } else {%>
-	<h5><%= article.ctcOrStipend %> :</h5> <p><%= article.ctc %> </p>
-	<% } %>
-<h5>Location :</h5> <p><%= article.location %> </p>
-<% if(article.khaliDabbaHeading =="n") {%>
-	<% } else {%>
-		<h5><%= article.khaliDabbaHeading %> :</h5> <p><%= article.khaliDabbaDescription %> </p>
-		<% } %>
-	<h5><%= article.candidateShouldHave %> :</h5>
-
-	<p> • <%= article.candidateShouldDescription1 %></p>
-	
-	<% if(article.candidateShouldDescription2=="n"){%>
-		<% } else {%>
-<p>	• <%= article.candidateShouldDescription2 %></p>	
-<% } %>
-	<% if(article.candidateShouldDescription3=="n"){%>
-		<% } else {%>
-<p>	• <%= article.candidateShouldDescription3 %></p>	
-<% } %>
-<% if(article.candidateShouldDescription4=="n"){%>
-	<% } else {%>
-<p>	• <%= article.candidateShouldDescription4 %></p>	
-<% } %>
-<% if(article.candidateShouldDescription5=="n"){%>
-	<% } else {%>
-<p>	• <%= article.candidateShouldDescription5 %></p>	
-<% } %>
-
-<a id="applylink" target="_blank"  href="<%= article.applyLink %>" >Click Here To Apply </a>
-
-<div class="row mt-5 pt-5 border-top">
-<div class="col-12">
-	<h4>
-<span class="fw-bold text-black small mb-1">Checkout Our Social Media Handles !!</span>
-</h4>
-<ul class="social list-unstyled">
-	<li><a href="https://bit.ly/2UFwHIY" target="_blank" ><i class="fab fa-instagram"></i></span></a></li>
-	<li><a href="https://t.me/internfreak" target="_blank" ><i class="fab fa-telegram-plane"></i></span></a></li>
-	<li><a href="https://bit.ly/2VAFaOp" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
-	<!-- <li><a href="#"><span class="icon-youtube-play"></span></a></li> -->
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+        <img src="/images/404-error.png" alt="404 Page Not Found !!" width="505" height="500"  class="img-fluid rounded mx-auto mt-4">
 <div class="section pb-0">
 	<div class="container">
 	<div class="row">
 	<div class="col-lg-12">
-	<h2 id ="recent"class="heading mb-4">Recent Openings</h2>
-	</div>
-	</div>
-	<div class="row justify-content-center">
-		<% for(let i=0;i<=5;i++) {%>
-	<div class="col-lg-12">
-	<div class="post-entry d-md-flex small-horizontal mb-5">
-	<div class="me-md-5 thumbnail mb-3 mb-md-0">
-		<a href="<%=articles[i].slug %>">
-	<img src="/uploads/<%=articles[i].image %>" alt="Image" width="185" height="100"  class="img-fluid"> </a>
-	</div>
-	<div class="content">
-	<h2 class="heading"><a href="<%=articles[i].slug %>"><%= articles[i].title %></a></h2>
-	<div class="post-meta mb-3">
-		
-		<a href="#" class="category"><%= articles[i].category %></a> &mdash;
-		
-		<span class="date"><%= articles[i].createdAt.toLocaleDateString() %></span>
-		</div>
-		
 	
 	</div>
 	</div>
-	</div>
-	<% } %>
-	</div>
-	</div>
-	</div>
-	<div class="text-center">
-		<a href="/jobs-and-internships?page=1&limit=15"><button class="btn center-block btn-primary">Show More</button></a>
-		</div>
-<br>
-<br>
-	
-<section>
-	<div class="section  pt-5 " id="Vision">
-	<div class="container">
 	<div class="row justify-content-center">
-	<div class="col-lg-8">
-	<div class="text-center">
-	<h5 class="heading text-center">Important !</h5>
-	<br>
-	<p>All Company names , logos , and brands are the Intellectual Property of their respective owners. All company , product , and service names used in this website are for identification purposes only.
-
-
+	
+	</div>
+	</div>
 <br>
-We are not associated with any company/agency/agent whose jobs posted on <strong> www.internfreak.co , internfreak.co</strong>  , We are just an information provider for job openings. Read our <a href="/terms-and-conditions" target="_blank"  class="m-2">Terms &amp; Conditions</a>
-and
-<a href="/privacy-policy"  target="_blank" class="m-2">Privacy Policy</a>
-for more information. 
-</p>				
-</section>
-
-
+<br>
 
 <div class="site-footer">
 <div class="container">
