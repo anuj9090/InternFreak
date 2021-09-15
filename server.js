@@ -45,6 +45,9 @@ app.get('/terms-and-conditions',(req,res)=>{
 app.get('/robots.txt',(req,res)=>{
   res.sendFile(__dirname + '/views/articles/robots.txt')
 })
+app.get('/ads.txt',(req,res)=>{
+  res.sendFile(__dirname + '/views/articles/ads.txt')
+})
 app.get('/privacy-policy',(req,res)=>{
   res.render("articles/privacy-policy")
 })
