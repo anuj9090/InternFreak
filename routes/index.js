@@ -71,7 +71,7 @@ router.post('/',upload.single("image"),async (req,res)=>{
    try{
        console.log(article);
  article= await article.save();
- res.redirect(`/jobs-and-internships/${article.slug}`)
+ res.redirect(`/jobs-and-internship-opportunities/${article.slug}`)
    }
    catch(e){
        console.log(e);

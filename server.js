@@ -57,7 +57,7 @@ app.get('/5-best-text-editors-for-webDevelopment',(req,res)=>{
 app.get('/404-error',(req,res)=>{
   res.render("articles/404")
 })
-app.use('/jobs-and-internships',articleRouter)
+app.use('/jobs-and-internship-opportunities',articleRouter)
 // app.use('/user',user);
 // app.use('/blog',Blog);
 // app.use('/udemy',udemy)
