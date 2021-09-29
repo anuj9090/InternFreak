@@ -78,7 +78,10 @@
 <% } else {%>
 	<h5><%= article.ctcOrStipend %> :</h5> <p><%= article.ctc %> </p>
 	<% } %>
-<h5>Location :</h5> <p><%= article.location %> </p>
+	<% if(article.location =="n") {%>
+<% } else {%>
+	<h5><%= Location %> :</h5> <p><%= article.location %> </p>
+	<% } %>
 <% if(article.khaliDabbaHeading =="n") {%>
 	<% } else {%>
 		<h5><%= article.khaliDabbaHeading %> :</h5> <p><%= article.khaliDabbaDescription %> </p>
