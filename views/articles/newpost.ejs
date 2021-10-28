@@ -57,10 +57,6 @@
 <img src="/uploads/<%=article.image%>" alt="Image"   class="img-fluid rounded mb-4">
 </div>
 <span class="date d-block text-center small text-uppercase text-black-50 mb-5" >Posted on : <%= article.createdAt.toLocaleDateString() %></span>
-
-<iframe data-aa="1825646" src="//ad.a-ads.com/1825646?size=970x90" style="width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;" ></iframe>
-
-
 <h2 class="heading text-center"><%= article.heading %></h2>
 <br>
 <p>
@@ -104,6 +100,8 @@
 	<% } else {%>
 <p>	• <%= article.candidateShouldDescription5 %></p>	
 <% } %>
+
+<iframe data-aa="1825646" src="//ad.a-ads.com/1825646?size=970x90" style="width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;" ></iframe>
 
 <br>
 <a id="applylink" target="_blank"  href="<%= article.applyLink %>" >Click Here To Apply </a>
