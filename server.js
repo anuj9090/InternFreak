@@ -51,9 +51,12 @@ app.get('/ads.txt',(req,res)=>{
 app.get('/privacy-policy',(req,res)=>{
   res.render("articles/privacy-policy")
 })
-app.get('/5-best-text-editors-for-webDevelopment',(req,res)=>{
-  res.render("articles/text-editor")
+app.get('/5-best-code-editors-for-web-development',(req,res)=>{
+  res.render("articles/blogs/5-best-code-editors");
 })
+// app.get('/5-best-text-editors-for-webDevelopment',(req,res)=>{
+//   res.render("articles/text-editor")
+// })
 // app.get('/404-error',(req,res)=>{
 //   res.render("articles/404")
 // })
@@ -64,6 +67,7 @@ app.use('/udemy',udemy)
 app.get('*', function(req, res){
   res.render("articles/404");
 });
+
 // app.use('/',articleRouter)
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
