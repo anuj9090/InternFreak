@@ -54,14 +54,7 @@ app.get('/privacy-policy',(req,res)=>{
 app.get('/5-best-code-editors-for-web-development',(req,res)=>{
   res.render("articles/blogs/5-best-code-editors");
 })
-// app.get('/5-best-text-editors-for-webDevelopment',(req,res)=>{
-//   res.render("articles/text-editor")
-// })
-// app.get('/404-error',(req,res)=>{
-//   res.render("articles/404")
-// })
 app.use('/jobs-and-internship-opportunities',articleRouter)
-// app.use('/user',user);
 app.use('/blog',Blog);
 app.use('/udemy',udemy)
 app.get('*', function(req, res){

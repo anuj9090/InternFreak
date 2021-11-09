@@ -44,6 +44,17 @@ router.post("/",async(req,res)=>{
   })
   try{
     console.log(udemy);
+  const udemyCourse=await axios.get(
+    `https://www.udemy.com/api-2.0/courses/${udemy.title}/?fields[course]=description,title,headline,_class,primary_category`,
+    {
+      headers:{
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Basic Q1hiVWhLSVE1ZU9uUDlRVXhLS3prUmJ0UlNzTHNseU1PUzJWQ0NHNjpnSzhFTDJpeGZSRVF0dVRKUnRGSjQ4VEljMlBaVVZqcGxlRUtLZE5YM1BXS1JWQUFpakExSFB4c2k4dFVTRWV1b3k4Nk9pUlBCam81UkRVTEFLQWhkWXpRRmpJdUx5bWFFa0k0OGd4UGpXYjJMcW5UUE50ZDE1UnpIR3U0cnpCNQ==",
+      "Content-Type": "application/json;charset=utf-8"
+    },
+  })
+  res.render("articles/udemy",{articles:udemyCourse.data})
+    console.log(udemy);
     udemy=await udemy.save();
     res.render(`articles/${article.slug}`)
   }
