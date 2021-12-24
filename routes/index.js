@@ -41,9 +41,7 @@ router.get('/',async (req,res)=>{
  const resultUsers=articles.slice(startIndex,endIndex);
             res.render('articles/jobs',{articles:resultUsers});     
 })
-router.get('/new',(req,res)=>{
-    res.render('articles/new',{article:new Article()})
-})
+
 router.post('/',upload.single("image"),async (req,res)=>{
    let article = new Article({
        title: req.body.title,
