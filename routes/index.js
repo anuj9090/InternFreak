@@ -22,8 +22,8 @@ var upload=multer({
 })
 
 app.use(express.static(path.join(__dirname,"public")));
-router.get('/hello',(req,res)=>{
-    res.render('articles/anujchutiya',{article:new Article()})
+router.get('/anujchutiya',(req,res)=>{
+    res.render('articles/new',{article:new Article()})
 })
 router.get('/',async (req,res)=>{
     const page=parseInt(req.query.page);
