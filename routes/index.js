@@ -20,7 +20,11 @@ var storage = multer.diskStorage({
 var upload=multer({
     storage:storage,
 })
+
 app.use(express.static(path.join(__dirname,"public")));
+router.get('/hello',(req,res)=>{
+    res.render('articles/anujchutiya',{article:new Article()})
+})
 router.get('/',async (req,res)=>{
     const page=parseInt(req.query.page);
    const limit=parseInt(req.query.limit);
