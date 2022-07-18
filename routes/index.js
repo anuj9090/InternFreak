@@ -22,7 +22,7 @@ var upload=multer({
 })
 
 app.use(express.static(path.join(__dirname,"public")));
-router.get('/рost',(req,res)=>{
+router.get('/ㅤost',(req,res)=>{
     res.render('articles/new',{article:new Article()})
 })
 router.get('/',async (req,res)=>{
